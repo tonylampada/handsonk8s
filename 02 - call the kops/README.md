@@ -52,14 +52,14 @@ edita o yaml:
 atualiza no s3 
 
 ```
-kops replace -f cluster_out.yaml
+kops replace -f cluster.yaml
 ```
 
 cria o cluster
 
 ```
 kops update cluster --name $CLUSTERNAME.$DOMAIN
-kops update cluster --name $CLUSTERNAME.$DOMAIN --yes
+kops update cluster --name $CLUSTERNAME.$DOMAIN --yes --admin
 ```
 
 vai la brincar
@@ -71,6 +71,19 @@ kops rolling-update cluster
 kops rolling-update cluster --yes
 
 kubectl...
+
+```
+
+
+Outras sugestoes do proprio kops
+
+```
+Suggestions:
+ * validate cluster: kops validate cluster --wait 10m
+ * list nodes: kubectl get nodes --show-labels
+ * ssh to the master: ssh -i ~/.ssh/id_rsa ubuntu@api.clustertestetony.busercamp.com.br
+ * the ubuntu user is specific to Ubuntu. If not using Ubuntu please use the appropriate user based on your OS.
+ * read about installing addons at: https://kops.sigs.k8s.io/addons.
 
 ```
 
