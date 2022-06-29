@@ -1,9 +1,15 @@
+# Objetivo
+Subir um cluster na nuvem (AWS + SPOT)
+
+# Vombora
+
 Instala o kops, configura os arquivos pra dar acesso à tua conta do spot e da AWS (~/.aws/credentials e ~/.spotinst/credentials) 
 https://kops.sigs.k8s.io/getting_started/install/
 https://kops.sigs.k8s.io/getting_started/spot-ocean/
 https://kops.sigs.k8s.io/getting_started/aws/#setup-your-environment
 
-Fica a vontade pra modificar as variaveis abaixo de acodo com o seu contexto
+As variaveis abaixo sao pra criar o cluster.
+Fica a vontade pra modificar de acodo com o seu contexto.
 
 ```
 export CLUSTERNAME=clustertestetony # o nome do cluster
